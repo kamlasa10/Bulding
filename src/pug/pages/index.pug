@@ -1,0 +1,184 @@
+
+extends ../layout/main
+block variable
+  -
+    var title_page = 'Главная'
+    var id_page = 'index-page'
+    var class_page = 'index-page'
+    var breadcrumbsSubitem = [
+      {
+        label: 'About',
+        link: pagesLink[0].about
+      }
+    ]
+  
+block meta
+  title= title_page
+  meta(name='description', content='')
+block head
+    link(rel='stylesheet', href="./assets/styles/main.min.css")
+block scripts
+  script(defer src='./assets/scripts/libs.js')
+  script(defer src='./assets/scripts/vendors.bundle.js')
+  script(defer src='./assets/scripts/index.bundle.js')
+  script(defer src='./assets/scripts/index.js')
+  script(defer src='./assets/scripts/home.js')
+block content
+    .promo
+      .page__decor.promo__decor
+      .promo__bottom-decor
+        .promo__bottom-decor__large
+      .promo__left
+        .promo__left-wrap
+          .promo__left-title ФАСАД ПОД КЛЮЧ
+          .promo__left-content
+            .promo__left-text Индивидуальное производство, продажа и комплексное оснащение фасадных систем (СПОК, ЛММ, НВФ), остекленение, квартир, частных домов, индивидуальных проектов и полноценных жилых комплексов, а также промышленных зданий, торговых и бизнес-центров.
+            button.btn.js-form-btn.promo__btn.btn--res
+              span ПОЛУЧИТЬ КОНСУЛЬТАЦИЮ
+              +svg('arrow-big')
+              span.btn__border
+      .promo__right
+        .promo__right-block
+          .promo__desc Нами облицовано более 100 000 м2 фасадов на более чем 20 объектах!
+        .swiper-container
+          .promo-slider.swiper-wrapper
+            .promo-slider__item.swiper-slide
+              +img('promo-slider-img.jpg')
+              .promo-slider__info
+                span.promo-slider__current / 03
+                span.promo-slider__text ЖК Chicago Central House
+            .promo-slider__item.swiper-slide
+              +img('promo-slider-img.jpg')
+              .promo-slider__info
+                span.promo-slider__current / 03
+                span.promo-slider__text ЖК Chicago Central House
+            .promo-slider__item.swiper-slide
+              +img('promo-slider-img.jpg')
+              .promo-slider__info
+                span.promo-slider__current / 03
+                span.promo-slider__text ЖК Chicago Central House
+            .promo-slider__item.swiper-slide
+              +img('promo-slider-img.jpg')
+              .promo-slider__info
+                span.promo-slider__current / 03
+                span.promo-slider__text ЖК Chicago Central House
+            .promo-slider__item.swiper-slide
+              +img('promo-slider-img.jpg')
+              .promo-slider__info
+                span.promo-slider__current / 03
+                span.promo-slider__text ЖК Chicago Central House
+          .promo-slider__dots.swiper-pagination
+            .promo-slider__dots-dot
+            .promo-slider__dots-dot
+            .promo-slider__dots-dot.active
+    .promo__bottom
+      .promo__bottom-left
+        .promo__bottom-content
+          .div
+            +svg('quote')
+          span.promo__bottom-text МЫ БЕРЕМ НА СЕБЯ ПОЛНУЮ <span>ОТВЕТСТВЕННОСТЬ ЗА ФАСАД</span> ВАШЕГО ПРОЕКТА
+      .promo__bottom-right
+        .promo__right-decor
+          +img('promo-slider-small.jpg')
+    .all-services
+      .container
+        .title.all-services__title Мы - компания полного цикла<br> и предоставляем весь спектр фасадных работ:
+        .all-services__wrap
+          ul.all-services__list
+            li.all-services__item
+              .all-services-item__number / 01
+              .all-services-item__content
+                .all-services-item__title Проектирование и производство фасадов любой сложности
+                .all-services-item__desc СПОК, ЛММ, НВФ
+            li.all-services__item
+              .all-services-item__number / 02
+              .all-services-item__content
+                .all-services-item__title Расчет конструкций на прочность
+                .all-services-item__desc Обеспечить надежное сопротивление элемента или конструкции в целом - означает обеспечить их прочность, жесткость, устойчивость и выносливость.
+            li.all-services__item
+              .all-services-item__number / 03
+              .all-services-item__content
+                .all-services-item__title Монтаж фасадных систем
+                .all-services-item__desc Мы предоставляем собственное оборудование для выполнения высотных работ: 40 механизмов, альпинистское снаряжение, леса, туры и многое другое.
+          ul.all-services__list
+            li.all-services__item
+              .all-services-item__number / 04
+              .all-services-item__content
+                .all-services-item__title Переработка, изготовление конструкций в собственном производственном цеху
+                .all-services-item__desc У нас есть собственная производственная база по переработке алюминиевых конструкций и производству металлических изделий любых сложностей.
+            li.all-services__item
+              .all-services-item__number / 05
+              .all-services-item__content
+                .all-services-item__title Прокладка электрики, ливневок
+                .all-services-item__desc Мы имеем в штате специалистов и опыт выполнения всего комплекса работ необходимого для полноценного фасада.
+    .services
+      .services__right-decor
+      .container
+        .services__wrap
+          .div
+            .title.services__title НАШИ УСЛУГИ
+            .services__content
+              a(href="#").services__link
+                span.services__link-current / 01
+                span.services__link-text Свето-прозрачные ограждающие конструкции (СПОК)
+                +svg('small-arrow')
+              a(href="#").services__link
+                span.services__link-current / 02
+                span.services__link-text Фасады Лёгким мокрым методом (ЛММ) или мокрые фасады
+                +svg('small-arrow')
+              a(href="#").services__link
+                span.services__link-current / 03
+                span.services__link-text Навесные вентилируемые фасады (НВФ)
+                +svg('small-arrow')
+              a(href="#").services__link
+                span.services__link-current / 04
+                span.services__link-text Стеклянные перегородки
+                +svg('small-arrow')
+              button.btn.js-form-btn.services__btn.btn--res
+                span ПОЛУЧИТЬ КОНСУЛЬТАЦИЮ
+                +svg('arrow-big')
+                span.btn__border
+          .services__right
+            +img('services-img.png').services__img
+            +img('services-img2.png').services__img2
+    .features
+      .container
+        .features__content
+          .features__top
+            .features__top-left
+              .features__decor
+              +img('features-img.png')
+            .features__title.title Генеральный подряд <br> по фасаду – это про нас! 
+          .all-services__wrap
+            ul.all-services__list
+              li.all-services__item
+                .all-services-item__number / 01
+                .all-services-item__content
+                  .all-services-item__desc 12 лет работы на рынке
+              li.all-services__item
+                .all-services-item__number / 02
+                .all-services-item__content
+                  .all-services-item__desc Гарантия 10 лет на все виды работ и год сервисного обслуживания в подарок
+              li.all-services__item
+                .all-services-item__number / 03
+                .all-services-item__content
+                  .all-services-item__desc Сертифицированные инженеры-прочнисты, конструктора, инженеры пто, архитекторы, бригады по выполнению высотных работ численностью свыше 150 человек
+            ul.all-services__list
+              li.all-services__item
+                .all-services-item__number / 04
+                .all-services-item__content
+                  .all-services-item__desc Производственная база компании «Билдинг Энерджи Альянс», на сегодняшний день, технически самая современная в Украине, это лучшее  итальянское и немецкое оборудование, и первоклассные материалы
+              li.all-services__item
+                .all-services-item__number / 05
+                .all-services-item__content
+                  .all-services-item__desc Ливнёвки, подсветка, козырьки, отливы, узлы примыканий, ограждения и крепления, стиз и декоративные вставки - мы не боимся брать на себя ответственность за Ваш фасад в целом
+          .features__block
+            button.btn.js-form-btn.services__btn.btn--res
+              span ПОЛУЧИТЬ КОНСУЛЬТАЦИЮ
+              +svg('arrow-big')
+              span.btn__border
+block footer
+  include ../includes/footer.pug
+
+block header
+  include ../includes/header.pug

@@ -1,0 +1,22 @@
+header.header
+  .container
+    .header__wrap
+      .logo.header__logo
+        +img('logo.svg')
+      .navigation
+        ul.navigation__list
+          li.navigation__item.navigation__item--active
+            a(href="#").navigation__link Наши услуги
+          li.navigation__item.navigation__item--dropdown
+            a(href="#").navigation__link Сотрудничество
+            ul.navigation__list-dropdown.navigation-dropdown
+              li.navigation-dropdown__item
+                a(href="#").navigation-dropdown__link Дизайнерам
+              li.navigation-dropdown__item.navigation-dropdown__item--active
+                a(href="#").navigation-dropdown__link Дилерам
+          li.navigation__item
+            a(href="#").navigation__link О компании
+          li.navigation__item
+            a(href="#").navigation__link Проекты
+          li.navigation__item
+            a(href="#").navigation__link Контакты

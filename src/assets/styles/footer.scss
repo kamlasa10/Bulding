@@ -1,0 +1,184 @@
+.footer {
+  margin-top: 125px;
+  padding-top: 20px;
+  position: relative;
+
+  &__decor-left {
+    position: absolute;
+    left: -50vw;
+    bottom: 25px;
+    width: 79vw;
+    border-bottom: 16px solid $red;
+    border-right: 16px solid $red;
+    border-bottom-right-radius: 95px;
+    height: 50%;
+  }
+
+  &__decor-right {
+    position: absolute;
+    right: -22.8vw;
+    width: 79vw;
+    height: 68%;
+    border-left: 16px solid $red;
+    border-top-left-radius: 95px;
+    border-top: 16px solid $red;
+    top: -35px;
+  }
+
+  &__content {
+    position: relative;
+    display: flex;
+    padding-bottom: 30px;
+  }
+
+  &__top {
+
+    &-left {
+      padding-left: 100px;
+      width: 40%;
+      position: relative;
+      z-index: 1;
+
+      &__decor {
+        position: absolute;
+      }
+    }
+
+    &-right {
+      padding-top: 27px;
+      width: 60%;
+      position: relative;
+      z-index: 1;
+      padding-left: 50px;
+    }
+
+    &-nav {
+      display: flex;
+
+      &__title {
+        color:$darkBlue;
+        font-weight: 700;
+        margin-bottom: 33px;
+      }
+
+      &__item {
+        display: flex;
+        flex-direction: column;
+        margin-right: 57px;
+
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+
+      &__link {
+        margin-bottom: 16px;
+        display: inline-block;
+        max-width: 280px;
+        color: $textColor;
+        text-decoration: none;
+        transition: all .4s;
+        border-bottom: 1px solid transparent;
+
+        &:hover {
+          opacity: .8;
+        }
+      }
+    }
+
+    &-contacts {
+      &__item {
+        margin-bottom: 16px;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+
+        b {
+          display: block;
+          margin-bottom: 8px;
+        }
+
+        a {
+          display: inline-block;
+          color: $textColor;
+          text-decoration: none;
+          transition: all .4s;
+          border-bottom: 1px solid transparent;
+
+          &:hover {
+            border-bottom: 1px solid $red;
+          }
+        }
+      }
+    }
+  }
+
+  &__middle {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    padding-left: 100px;
+
+    &-btn {
+      font-family: inherit;
+      font-size: 18px;
+      position: relative;
+
+      svg {
+        position: absolute;
+        width: 60px;
+        height: 60px;
+        transform: rotate(-90deg) translateY(-100%) translateX(50%);
+        top: -89px;
+        fill: $red;
+      }
+
+      &__bordered {
+        position: absolute;
+        display: block;
+        transform: translateY(-115%);
+        margin-bottom: 8px;
+        width: 62px;
+        height: 62px;
+        border: 2px solid $red;
+      }
+
+      &__text {
+        font-weight: 700;
+        color: $darkBlue;
+      }
+    }
+
+    &-left {
+      display: flex;
+    }
+
+    &-item {
+      position: relative;
+      margin-right: 107px;
+
+      &:last-child {
+        margin-right: 0;
+      }
+
+      a {
+        font-weight: 700;
+        color: $darkBlue;
+        text-decoration: none;
+        transition: all .4s;
+        border-bottom: 1px solid transparent;
+
+        &:hover {
+          border-bottom: 1px solid $red;
+        }
+      }
+    }
+
+
+  }
+
+  &__logo {
+    margin-bottom: 30px;
+  }
+}

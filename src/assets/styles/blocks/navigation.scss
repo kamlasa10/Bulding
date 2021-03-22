@@ -1,0 +1,139 @@
+.navigation {
+  @include to(920px) {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  &__list {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__item {
+    margin-right: 48px;
+
+    @include to(1100px) {
+      margin-right: 35px;
+    }
+
+    &--dropdown {
+      margin-right: 95px;
+      position: relative;
+
+      @include to(1100px) {
+        margin-right: 60px;
+      }
+
+      .navigation__link {
+        font-weight: 700;
+        border: none;
+
+        &::after,
+        &::before {
+          content: "";
+          position: absolute;
+          right: -20px;
+          top: 54%;
+          transform: translateY(-50%);
+          width: 0;
+          height: 0;
+          border-left: 6px solid transparent;
+          border-right: 6px solid transparent;
+          border-top: 9px solid $darkBlue;
+          transition: all .4s;
+        }
+
+        &::before {
+          top: 50%;
+          border-top: none;
+          border-bottom: 9px solid $darkBlue;
+          display: none;
+        }
+      }
+
+      &:hover {
+        .navigation__link {
+          border: none;
+
+          &::after {
+            display: none;
+          }
+
+          &::before {
+            display: block;
+          }
+        }
+
+        .navigation-dropdown {
+          opacity: 1;
+          z-index: 1;
+          transform: translateX(0);
+        }
+      }
+    }
+
+    &--active {
+      font-weight: 700;
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  &__link {
+    font-size: 18px;
+    line-height: 1.2em;
+    color: $darkBlue;
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: all .4s;
+
+    @include to(1440px) {
+      font-size: 16px;
+    }
+
+    &:hover {
+      border-color: red;
+    }
+  }
+
+  &-dropdown {
+    position: absolute;
+    bottom: -80px;
+    width: calc(100% + 20px);
+    padding: 8px 16px;
+    border: 1px solid rgba(54, 63, 83, 0.2);
+    border-top: 2px solid $red;
+    box-sizing: border-box;
+    border-radius: 0px 0px 6px 6px;
+    background-color: #fff;
+    transition: all .4s;
+    transform: translateX(10px);
+    opacity: 0;
+    z-index: -1;
+
+    &__item--active {
+      .navigation-dropdown__link {
+        font-weight: 500;
+        color: $red;
+      }
+    }
+
+    &__link {
+      font-size: 18px;
+      line-height: 1.5em;
+      color: $textColor;
+      text-decoration: none;
+
+      @include to(1440px) {
+        font-size: 16px;
+      }
+
+      &:hover {
+        opacity: .8;
+      }
+    }
+  }
+}

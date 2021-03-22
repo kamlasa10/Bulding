@@ -1,0 +1,54 @@
+.header {
+  height: $headerHeight;
+  padding-top: 65px;
+  margin-bottom: 65px;
+
+  @include to(1025px) {
+    margin-bottom: 35px;
+  }
+
+  @include to(920px) {
+    height: auto;
+    padding-top: 40px;
+  }
+
+  &__wrap {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  .header__logo {
+    @include to(920px) {
+      display: flex;
+      justify-content: center;
+      margin: 0 auto;
+      margin-bottom: 25px;
+    }
+  }
+}
+
+.header__logo {
+  margin: 0 auto 0 0;
+  height: calc(#{$headerHeight} - 40px);
+
+  img {
+    width: auto;
+    height: 100%;
+  }
+
+  @include to(1440px) {
+    height: calc(#{$headerHeight} - 70px);
+  }
+
+  @include to(992px) {
+    height: calc(#{$headerHeight} - 80px);
+  }
+
+  @include to(920px) {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    margin-bottom: 25px;
+  }
+}
